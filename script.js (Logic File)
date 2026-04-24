@@ -1,9 +1,0 @@
-function generateAssignment() {
-    const topic = document.getElementById('topic').value;
-    if(!topic) return alert("Topic likhen!");
-    document.getElementById('loader').classList.remove('hidden');
-    setTimeout(() => {
-        document.getElementById('result').innerHTML = "<h3>" + topic + "</h3><p>Ye aapka AI assignment hai...</p>";
-        document.getElementById('loader').classList.add('hidden');
-    }, 2000);
-}
