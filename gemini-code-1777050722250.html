@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator - SmartAssign Pro AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gradient-bg">
+    <nav class="glass-nav">
+        <div class="logo" onclick="window.location.href='index.html'">SmartAssign <span>Pro</span></div>
+        <button class="premium-btn">Upgrade to Pro</button>
+    </nav>
+
+    <div class="tool-container glass">
+        <h2>Assignment Generator</h2>
+        <div class="input-group">
+            <label>Assignment Topic</label>
+            <input type="text" id="topic" placeholder="e.g. Sociology and Human Behavior">
+        </div>
+
+        <div class="options-row">
+            <div class="input-group">
+                <label>Word Count</label>
+                <select id="words">
+                    <option value="700">700 Words (Free)</option>
+                    <option value="1200" disabled>1200 Words (Premium)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Writing Mode</label>
+                <select id="mode">
+                    <option value="easy">Easy Mode</option>
+                    <option value="advanced">Advanced Mode</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="generate-btn" onclick="generateAssignment()">Generate Assignment</button>
+
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>AI is writing your assignment...</p>
+        </div>
+
+        <div id="output-area" class="hidden">
+            <div id="result" class="result-box"></div>
+            <div class="actions">
+                <button onclick="copyText()">Copy Text</button>
+                <button onclick="downloadText()">Download .txt</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
